@@ -1,0 +1,4 @@
+import spark
+
+print('abc');
+
