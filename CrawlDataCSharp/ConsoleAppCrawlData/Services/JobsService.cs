@@ -34,5 +34,10 @@ namespace ConsoleAppCrawlData.Services
         {
             _jobsCollection.InsertOne(input);
         }
+
+        public void DeleteAll()
+        {
+            _jobsCollection.DeleteMany(Builders<Jobs>.Filter.Empty);
+        }
     }
 }
