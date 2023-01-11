@@ -19,7 +19,6 @@ for skill in dfSkills.collect():
 
 # print(skills)
 # Đếm kỹ năng nào đang yêu cầu nhiều
-
 countSkills = Counter(skills).items()
 countSkillsSorted = sorted(countSkills, key=lambda x: x[1], reverse=True)
 #print(countSkillsSorted)
@@ -29,3 +28,4 @@ for item in countSkillsSorted:
     dicSkills.append({ "name": item[0], "count": item[1] })
 f = open("CountSkills.json", "w")
 f.write(json.dumps(dicSkills))
+
